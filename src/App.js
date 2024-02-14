@@ -11,6 +11,7 @@ import { themeSettings } from "./theme";
 function App() {
 
   const mode = useSelector((state) => state.mode);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const theme = useMemo(() => createTheme(themeSettings(mode), [mode]));
   const isAuth = Boolean(useSelector((state) => state.token))
 
